@@ -1,0 +1,109 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+/* Custom styles for carousel */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+}
+.carousel-inner {
+    position: relative;
+    height: 100%;
+}
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out; /* Fade untuk background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carousel-item.active {
+    opacity: 1;
+}
+.carousel-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+.carousel-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    transform: translateX(0);
+    transition: transform 0.7s ease-in-out; /* Geser untuk teks */
+}
+.carousel-content.slide-left {
+    transform: translateX(-100%);
+}
+.carousel-content.slide-right {
+    transform: translateX(100%);
+}
+.carousel-indicators {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+}
+.indicator {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.indicator.active {
+    background: white;
+    transform: scale(1.2);
+}
+.btn-primary {
+    background: linear-gradient(45deg, #ff6b35, #f7931e);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(255, 107, 53, 0.3);
+}
+.section-padding {
+    padding: 80px 0;
+}
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+/* Scroll reveal initial state */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}

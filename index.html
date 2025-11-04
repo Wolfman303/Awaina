@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Awaina - Terasi berkualitas tinggi dari Desa Simpang Lhee, Langsa Barat, Kota Langsa sejak 1950. Varian Original, Sangrai, dan Panggang.">
+    <meta name="keywords" content="terasi, awaina, langsa, aceh, umkm, original, sangrai, panggang">
+    <title>Awaina - Terasi Berkualitas dari Langsa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <!-- Header with Carousel -->
+    <header id="home" class="relative">
+        <div class="carousel" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+            <div class="carousel-inner bg-black">
+                <div class="carousel-item active" style="background-image: url('img/banner.jpg'); filter: brightness(70%);">
+                    <div class="carousel-content">
+                        <h1 class="text-5xl md:text-7xl font-bold mb-4">Terasi Awaina</h1>
+                        <p class="text-xl md:text-2xl mb-6">Cita Rasa Autentik Sejak 1950</p>
+                        <a href="#products" class="btn-primary inline-block" data-aos="zoom-out-up" data-aos-duration="800"
+                            data-aos-delay="800">Jelajahi Produk</a>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: url('img/terasi-panggang.jpg'); filter: brightness(70%);">
+                    <div class="carousel-content slide-right">
+                        <h1 class="text-5xl md:text-7xl font-bold mb-4">Varian Berkualitas</h1>
+                        <p class="text-xl md:text-2xl mb-6">Original, Sangrai, Panggang</p>
+                        <a href="#about" class="btn-primary inline-block">Tentang Kami</a>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: url('img/banner.jpg'); filter: brightness(70%);">
+                    <div class="carousel-content slide-right">
+                        <h1 class="text-5xl md:text-7xl font-bold mb-4">Dari Langsa</h1>
+                        <p class="text-xl md:text-2xl mb-6">Desa Simpang Lhee, Langsa Barat</p>
+                        <a href="#contact" class="btn-primary inline-block">Hubungi Kami</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-indicators">
+                <div class="indicator active" onclick="goToSlide(0)"></div>
+                <div class="indicator" onclick="goToSlide(1)"></div>
+                <div class="indicator" onclick="goToSlide(2)"></div>
+            </div>
+        </div>
+        <nav class="absolute top-0 left-0 right-0 bg-gray-800 text-white shadow-lg" data-aos="fade-down" data-aos-duration="800">
+            <div class="container mx-auto px-6 py-5 flex justify-between items-center">
+                <div class="text-3xl font-bold text-orange-400">Awaina</div>
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="#home" class="hover:text-orange-300 transition duration-300">Beranda</a></li>
+                    <li><a href="#about" class="hover:text-orange-300 transition duration-300">Tentang Kami</a></li>
+                    <li><a href="#products" class="hover:text-orange-300 transition duration-300">Produk</a></li>
+                    <li><a href="#contact" class="hover:text-orange-300 transition duration-300">Kontak</a></li>
+                </ul>
+                <button class="md:hidden text-2xl" onclick="toggleMenu()">☰</button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden bg-black bg-opacity-90 px-6 py-4">
+                <ul class="space-y-4">
+                    <li><a href="#home" class="block hover:text-orange-300 transition duration-300">Beranda</a></li>
+                    <li><a href="#about" class="block hover:text-orange-300 transition duration-300">Tentang Kami</a></li>
+                    <li><a href="#products" class="block hover:text-orange-300 transition duration-300">Produk</a></li>
+                    <li><a href="#contact" class="block hover:text-orange-300 transition duration-300">Kontak</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section (Below Carousel) -->
+    <section class="section-padding bg-gradient-to-r from-orange-50 to-yellow-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-6 text-gray-800">Selamat Datang di Awaina</h2>
+            <p class="text-xl mb-8 text-gray-600 max-w-3xl mx-auto" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="600" data-aos-delay="200">Terasi berkualitas tinggi dari Desa Simpang Lhee, Langsa Barat, Kota Langsa. Nikmati cita rasa autentik sejak 1950 dengan produksi modern menggunakan mesin, tersedia di toko offline, Shopee, TikTok, Instagram, dan WhatsApp.</p>
+            <a href="#products" class="btn-primary inline-block" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="500">Lihat Produk Kami</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Tentang Kami</h2>
+            <div class="flex flex-col lg:flex-row items-center">
+                <img src="img/pp.jpg" alt="Tentang Awaina" class="w-full lg:w-1/2 rounded-lg shadow-lg mb-8 lg:mb-0 lg:mr-12 card" data-aos="fade-up" data-aos-duration="1000">
+                <div class="lg:w-1/2" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+                    <p class="text-lg leading-relaxed text-gray-700 mb-6">Awaina adalah UMKM terasi yang telah berdiri sejak 1950 di Desa Simpang Lhee, Langsa Barat, Kota Langsa. Kami berkomitmen menghasilkan terasi berkualitas dengan proses produksi modern menggunakan mesin, sambil mempertahankan cita rasa tradisional yang autentik. Terasi kami diproduksi dari bahan-bahan pilihan untuk memastikan kebersihan dan kelezatan.</p>
+                    <p class="text-lg leading-relaxed text-gray-700">Dengan pengalaman puluhan tahun, kami telah menjadi pilihan utama bagi pecinta kuliner Aceh. Produk kami tersedia melalui berbagai kanal penjualan untuk memudahkan akses Anda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="section-padding bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Varian Terasi Kami</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center card">
+                    <img src="https://source.unsplash.com/350x250/?shrimp-paste-original" alt="Terasi Original" class="w-full h-56 object-cover rounded mb-6">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Terasi Original</h3>
+                    <p class="text-gray-600 mb-6" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="600">Terasi murni dengan cita rasa asli, sempurna untuk masakan sehari-hari. Dibuat dari udang fermentasi alami tanpa bahan tambahan.</p>
+                    <a href="#contact" class="btn-primary inline-block" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="500">Pesan Sekarang</a>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center card">
+                    <img src="img/terasi-sangrai.jpg" alt="Terasi Sangrai" class="w-full h-56 object-cover rounded mb-6">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Terasi Sangrai</h3>
+                    <p class="text-gray-600 mb-6" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="600">Terasi yang disangrai untuk aroma dan rasa yang lebih kuat, ideal untuk sambal atau bumbu tumis yang autentik.</p>
+                    <a href="#contact" class="btn-primary inline-block" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="500">Pesan Sekarang</a>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center card">
+                    <img src="img/terasi-panggang.jpg" alt="Terasi Panggang" class="w-full h-56 object-cover rounded mb-6">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Terasi Panggang</h3>
+                    <p class="text-gray-600 mb-6" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="600">Terasi yang dipanggang untuk tekstur renyah dan rasa gurih, cocok untuk berbagai hidangan tradisional Aceh.</p>
+                    <a href="#contact" class="btn-primary inline-block" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="500">Pesan Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Kontak Kami</h2>
+            <div class="text-center">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-gray-800">Informasi Kontak</h3>
+                        <p class="text-lg mb-2 text-gray-600"><strong>Lokasi:</strong> Desa Simpang Lhee, Langsa Barat, Kota Langsa</p>
+                        <p class="text-lg mb-2 text-gray-600"><strong>Telepon:</strong> 085260787621</p>
+                        <p class="text-lg mb-2 text-gray-600"><strong>Email:</strong> [Masukkan email Anda]</p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-gray-800">Kanal Penjualan</h3>
+                        <div class="flex flex-wrap justify-center gap-4">
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="48" height="48" class='text-2xl  bg-orange-600 px-3 py-2 rounded-full font-semibold transition duration-300 inline-block'  style='color:#ffffff'
+                            fill="currentColor" viewBox="0 0 24 24" >
+                            <path d="M12 2C9.24 2 7 4.24 7 7v1H4c-.55 0-1 .45-1 1v11c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V9c0-.55-.45-1-1-1h-3V7c0-2.76-2.24-5-5-5M9 7c0-1.65 1.35-3 3-3s3 1.35 3 3v1H9zm10 3v10H5V10z"></path>
+                            </svg>
+                            <i class='bxl  bx-tiktok text-2xl  bg-black px-3 py-2 rounded-full font-semibold transition duration-300 inline-block'  style='color:#ffffff'></i> 
+                            <i class='bxl  bx-instagram text-2xl  bg-gradient-to-r from-purple-600 via-red-500 to-yellow-500 px-3 py-2 rounded-full font-semibold transition duration-300 inline-block'  style='color:#ffffff'></i> 
+                            <i class='bxl  bx-whatsapp text-2xl bg-green-500 px-3 py-2 rounded-full font-semibold transition duration-300 inline-block'  style='color:#fff'></i>
+                        </div>
+                        <p class="text-lg mt-4 text-gray-600">Kunjungi toko offline kami untuk pembelian langsung.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-lg mb-4">&copy; 2023 Awaina. Semua hak dilindungi. Terasi Berkualitas dari Langsa.</p>
+            <p class="text-sm text-gray-400">Didukung oleh teknologi modern untuk cita rasa tradisional.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+  const isMobile = window.innerWidth < 768;
+
+  if (isMobile) {
+    const productsSection = document.querySelector('#products');
+    if (productsSection) {
+      productsSection.querySelectorAll('[data-aos]').forEach(el => {
+        el.removeAttribute('data-aos');
+        el.removeAttribute('data-aos-offset');
+        el.removeAttribute('data-aos-delay');
+        el.removeAttribute('data-aos-duration');
+        el.removeAttribute('data-aos-easing');
+      });
+
+      // Tambahkan kembali AOS fade-up dengan durasi 600ms
+      productsSection.querySelectorAll('.card').forEach(card => {
+        card.setAttribute('data-aos', 'fade-up');
+        card.setAttribute('data-aos-duration', '600');
+      });
+    }
+  }
+
+  // Inisialisasi AOS untuk semua elemen lain
+  AOS.init({
+    offset: 80,
+    duration: 800,
+    once: true
+  });
+</script>
+</body>
+</html>
