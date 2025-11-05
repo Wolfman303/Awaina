@@ -185,15 +185,21 @@
         card.setAttribute('data-aos', 'fade-up');
         card.setAttribute('data-aos-duration', '600');
       });
-    }
-  }
 
-  // Inisialisasi AOS untuk semua elemen lain
-  AOS.init({
-    offset: 80,
-    duration: 800,
-    once: true
-  });
+      // Inisialisasi AOS dengan default (tanpa offset custom)
+      AOS.init({
+        duration: 800,
+        once: true
+      });
+    }
+  } else {
+    // Inisialisasi AOS dengan offset khusus untuk desktop
+    AOS.init({
+      offset: 80,
+      duration: 800,
+      once: true
+    });
+  }
 </script>
 </body>
 </html>
